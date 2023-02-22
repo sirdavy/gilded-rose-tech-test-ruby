@@ -39,6 +39,23 @@ describe GildedRose do
     
     end
 
+    it "tests the update of sell_in and quality of Brie" do
+      items = [
+        Item.new("Aged Brie", 10, 10),
+        Item.new("Aged Brie", 1, 20),
+        Item.new("Aged Brie", 0, 30),
+        Item.new("Aged Brie", -1, 40)
+        ]
+      GildedRose.new(items).update_quality()
+      expect(items[0].sell_in).to eq 9
+      expect(items[0].quality).to eq 11
+      expect(items[1].sell_in).to eq 0
+      expect(items[1].quality).to eq 21
+      expect(items[2].sell_in).to eq -1
+      expect(items[2].quality).to eq 32
+      expect(items[3].sell_in).to eq -2
+      expect(items[3].quality).to eq 42
+    end
 
 
   end
