@@ -58,6 +58,19 @@ describe GildedRose do
     end
 
 
+    it "tests the quality of any item can never more than 50" do
+      items = [
+        Item.new("Aged Brie", 10, 50),
+        Item.new("Aged Brie", -1, 50),
+        Item.new("Aged Brie", -1, 50),
+        Item.new("Backstage passes to a TAFKAL80ETC concert", 15, 50),
+        Item.new("Backstage passes to a TAFKAL80ETC concert", 10, 50),
+        Item.new("Backstage passes to a TAFKAL80ETC concert", 5, 50)
+        ]
+      GildedRose.new(items).update_quality()
+      expect(items.map(&:quality)).to all(eq(50))
+    end
+
   end
 end
 
