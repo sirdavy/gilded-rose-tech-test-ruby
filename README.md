@@ -54,12 +54,13 @@ INPUT
 "Backstage passes to a TAFKAL80ETC concert", 15, 10
 "Backstage passes to a TAFKAL80ETC concert", 10, 10
 "Backstage passes to a TAFKAL80ETC concert", 5, 10
+"Backstage passes to a TAFKAL80ETC concert", 1, 10
 
 OUTPUT
 Backstage passes to a TAFKAL80ETC concert, 14, 11
 Backstage passes to a TAFKAL80ETC concert, 9, 12
 Backstage passes to a TAFKAL80ETC concert, 4, 13
-
+Backstage passes to a TAFKAL80ETC concert, 0, 13
 
 * Understand specifications of test:
   
