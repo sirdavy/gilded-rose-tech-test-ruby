@@ -126,17 +126,17 @@ describe GildedRose do
       expect(items[11].quality).to eq 50
     end
 
-    # it "tests that quality of conjured item degrades twices as fast when sell_in changes to zero" do
-    #   items = [
-    #     Item.new("Conjured item", 10, 10)
-    #     Item.new("Conjured item", 0, 10)
-    #     ]
-    #   GildedRose.new(items).update_quality()
-    #   expect(items[0].sell_in).to eq 9
-    #   expect(items[0].quality).to eq 8
-    #   expect(items[1].sell_in).to eq -1
-    #   expect(items[1].quality).to eq 6
-    # end
+    it "tests that quality of conjured item degrades twices as fast when sell_in changes to zero" do
+      items = [
+        Item.new("Conjured item", 10, 10),
+        Item.new("Conjured item", 0, 10)
+        ]
+      GildedRose.new(items).update_quality()
+      expect(items[0].sell_in).to eq 9
+      expect(items[0].quality).to eq 8
+      expect(items[1].sell_in).to eq -1
+      expect(items[1].quality).to eq 6
+    end
 
 
   end
