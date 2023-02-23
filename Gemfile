@@ -6,6 +6,4 @@ source "https://rubygems.org"
 
 gem "rspec", "~> 3.12"
 
-group :test do
-gem 'simplecov', require: false
-end
+gem 'simplecov', require: false, group: :test
